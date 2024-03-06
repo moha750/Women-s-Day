@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>شجرة عائلة نادي أدِيب</title>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css'><link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="card">
+            <div class="parent">
+                <div class="top-div">
+                   <img src="logo.png" alt="">
+                </div>
+
+            </div> 
+
+            <form method="post" action="https://script.google.com/macros/s/AKfycbywHFZpR6AVmdOdWOZXkzskPuALumkqs3notN-VypGv5C17Ozh8XlbEEuFlQ0R8r_0xkA/exec" name="MyGroup">
+
+            <div class="main active">
+                <div class="content">
+                  <h4> ✨أدِيب يفخر بِكُن 
+                  </h4>
+                   <p>
+                    نادي أدِيب يفخر بإحتضان نُخبة من الأدِيبات
+
+                     </p>
+                </div>
+                <div class="input-text">
+                    <input id="input" type="text" placeholder="اكتبِ أسمك الثلاثي " id="full-name" name="الأسم الثلاثي" require>
+                    <span>✍🏻أسم الأدِيبة</span>
+                </div>
+
+                <div class="input-text">
+                 <textarea name="مساحة" id="input" cols="30" rows="10" placeholder="هذه المساحة، تسع إنجازاتك" require></textarea>
+                  <span>  📝هُنا، سطري إنجازاتك  </span>
+              </div>
+
+                <div class="button">
+                    <button type="submit" value="Submit" class="create-workspace">ارسال</button>
+                </div>
+            </div> 
+
+
+      
+            <div class="main">
+               
+              <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+                  <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none"/>
+                  <path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
+              </svg>
+              <div class="content">
+                 <h2 style="color: #ff53b0;">  ✨شُكرًا لكِ يـ أدِيبه  </h2>
+                 <!-- <p> 
+                  في حفظ الرحمن ونترقب لُقياك   </p> -->
+              </div>
+
+
+              
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+    </form>
+      <script src="script.js"></script>
+      <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbywHFZpR6AVmdOdWOZXkzskPuALumkqs3notN-VypGv5C17Ozh8XlbEEuFlQ0R8r_0xkA/exec'
+        const form = document.forms['MyGroup']
+
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+          // .then(response => alert("Thank you! your form is submitted successfully." ))
+          // .then(() => {  window.location.reload(); })
+          // .catch(error => console.error('Error!', error.message))
+        })
+        </script>
+
+        <script>
+          function isChecked() {
+            if(document.getElementById("mobile").checked){
+              document.getElementById("result").style.display = 'block'
+            }
+            else{
+              document.getElementById("result").style.display = 'none'
+            }
+          }
+        </script>
+
+      </body>
+</html>
